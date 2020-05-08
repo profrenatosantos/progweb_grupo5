@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresetação do Grupo</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box header">Header<br>Header<br>Header<br></div>
+        <div class="box sidebar">
+            <nav>
+                <h1>Integrantes</h1>
+                <a href wm-nav="integrantes/profrenato.html">Professor</a> <br>
+                <a href wm-nav="integrantes/alunoteste1.html">DEV01 - Aluno</a> <br>
+                <a href wm-nav="integrantes/alunoteste2.html">DEV02 - Aluno</a> <br>
+                <a href wm-nav="integrantes/alunoteste3.html">DEV03 - Aluno</a> <br>
+                <a href wm-nav="integrantes/alunoteste4.html">DEV04 - Aluno</a> <br>
+                <a href wm-nav="integrantes/alunoteste5.html">DEV05 - Aluno</a> <br>
+                <a href wm-nav="integrantes/alunoteste6.html">DEV06 - Aluno</a> <br>
+                <a href wm-nav="integrantes/alunoteste7.html">DEV07 - Aluno</a> <br>
+                <a href wm-nav="integrantes/alunoteste8.html">DEV08 - Aluno</a> <br>
+                <a href wm-nav="integrantes/alunoteste9.html">DEV09 - Aluno</a> <br>
+            </nav>
+        </div>
+        <div class="box sidebar2">Sidebar 2</div>
+        <div class="box content" id="conteudo">Content
+            <br /> More content than we had before so this column is now quite tall.</div>
+        <div class="box footer">Footer</div>
+    </div>
+    <script>
+        document.querySelectorAll('[wm-nav]').forEach(link => {
+            const conteudo = document.getElementById('conteudo')
+
+            link.onclick = function (e) {
+                e.preventDefault()
+                fetch(link.getAttribute('wm-nav'))
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+            }
+        })
+    </script>
+</body>
+
+</html>
