@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Revisão para Prova</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+
+</head>
+
+<body class="body">
+
+    <div class="wrapper">
+        <div class="box a">
+            <h1>CABEÇALHO</h1>
+        </div>
+        <div class="box b">
+            <H1>MENU1</H1>
+            <div class="box sidebar">
+                <nav>
+                    <h1>Curso Web Frontend</h1>
+                    <a href wm-nav="paginas/intohtml.html">HTML Introduction</a> <br>
+                    <a href wm-nav="paginas/alunoteste4.html">HTML Elements</a> <br>
+                    <a href wm-nav="paginas/alunoteste2.html">HTML Id</a> <br>
+                    <a href wm-nav="paginas/alunoteste3.html">HTML class</a> <br>
+                    <a href wm-nav="paginas/alunoteste5.html">HTML Forms</a> <br>
+                    <a href wm-nav="paginas/alunoteste6.html">HTML Form Elements</a> <br>
+                    <a href wm-nav="paginas/alunoteste7.html">CSS Introduction</a> <br>
+                    <a href wm-nav="paginas/alunoteste8.html">CSS Backgrounds</a> <br>
+                    <a href wm-nav="paginas/alunoteste9.html">CSS Borders</a> <br>
+                    <a href wm-nav="paginas/alunoteste9.html">CSS Margins</a> <br>
+                    <a href wm-nav="paginas/alunoteste9.html">CSS Padding</a> <br>
+                    <a href wm-nav="paginas/alunoteste9.html">CSS Fonts</a> <br>
+                </nav>
+            </div>
+        </div>
+        <div class="box c" id="conteudo">
+            <H1>CONTEUDO
+
+                <h2>HTML Table</h2>
+
+
+                <!--<table class="table table-striped table-inverse table-responsive">-->
+                <table class="table table-striped fa-table-tennis table-hover">
+                    <tr>
+                        <th>Company</th>
+                        <th>Contact</th>
+                        <th>Country</th>
+                    </tr>
+                    <tr>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                    </tr>
+                    <tr>
+                        <td>Centro comercial Moctezuma</td>
+                        <td>Francisco Chang</td>
+                        <td>Mexico</td>
+                    </tr>
+                    <tr>
+                        <td>Ernst Handel</td>
+                        <td>Roland Mendel</td>
+                        <td>Austria</td>
+                    </tr>
+                    <tr>
+                        <td>Island Trading</td>
+                        <td>Helen Bennett</td>
+                        <td>UK</td>
+                    </tr>
+                    <tr>
+                        <td>Laughing Bacchus Winecellars</td>
+                        <td>Yoshi Tannamuri</td>
+                        <td>Canada</td>
+                    </tr>
+                    <tr>
+                        <td>Magazzini Alimentari Riuniti</td>
+                        <td>Giovanni Rovelli</td>
+                        <td>Italy</td>
+                    </tr>
+                </table>
+
+            </H1>
+        </div>
+        <div class="box d">
+            <H1>MENU2</H1>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('[wm-nav]').forEach(link => {
+            const conteudo = document.getElementById('conteudo')
+
+            link.onclick = function (e) {
+                e.preventDefault()
+                fetch(link.getAttribute('wm-nav'))
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+            }
+        })
+    </script>
+
+</body>
+
+</html>

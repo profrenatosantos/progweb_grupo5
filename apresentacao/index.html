@@ -10,39 +10,51 @@
 
 <body>
     <div class="wrapper">
-        <div class="box header">Header<br>Header<br>Header<br></div>
+        <div class="box header">
+            <img class="image" src="/img/man-using-laptop.jpg" alt="" width="600px" height="150px" style="float: left;">
+            <h1 style="text-align: right; font-size: 60px; margin: 0px 0px;">Página de Projetos</h1>
+            <h2 style="text-align: right; font-size: 30px; margin: 20px 0px;">Fatec Taquaritinga</h2>
+        </div>
         <div class="box sidebar">
             <nav>
-                <h1>Integrantes</h1>
-                <a href wm-nav="integrantes/profrenato.html">Professor</a> <br>
-                <a href wm-nav="integrantes/alunoteste1.html">DEV01 - Aluno</a> <br>
-                <a href wm-nav="integrantes/alunoteste2.html">DEV02 - Aluno</a> <br>
-                <a href wm-nav="integrantes/alunoteste3.html">DEV03 - Aluno</a> <br>
-                <a href wm-nav="integrantes/alunoteste4.html">DEV04 - Aluno</a> <br>
-                <a href wm-nav="integrantes/alunoteste5.html">DEV05 - Aluno</a> <br>
-                <a href wm-nav="integrantes/alunoteste6.html">DEV06 - Aluno</a> <br>
-                <a href wm-nav="integrantes/alunoteste7.html">DEV07 - Aluno</a> <br>
-                <a href wm-nav="integrantes/alunoteste8.html">DEV08 - Aluno</a> <br>
-                <a href wm-nav="integrantes/alunoteste9.html">DEV09 - Aluno</a> <br>
+                <h2>Integrantes</h2>
+                <a href wm-nav="integrantes/profrenato.html">Prof. Me. Renato</a> <br>
+                <a href wm-nav="integrantes/vitorchioda.html">DEV01 - VitorChioda</a> <br>
+                <a href wm-nav="integrantes/guilhermeTinen.html">DEV02 - GuilhermeOrtolani</a> <br>
+                <a href wm-nav="integrantes/lucas.html">DEV03 - LucasSilva</a> <br>
+                <a href wm-nav="integrantes/Bruno.html">DEV04 - BrunoSouza</a> <br>
+                <a href wm-nav="integrantes/joaomialich.html">DEV04 - JoaoScarpin</a> <br>
+                <h2>Avaliações</h2>
+                <a href wm-nav="/avaliacao1.html">1º Bim - Avaliação 1</a> <br>
+                <a href wm-nav="/projeto2.html">2º Bim - Projeto</a> <br>
             </nav>
         </div>
-        <div class="box sidebar2">Sidebar 2</div>
-        <div class="box content" id="conteudo">Content
-            <br /> More content than we had before so this column is now quite tall.</div>
-        <div class="box footer">Footer</div>
-    </div>
-    <script>
-        document.querySelectorAll('[wm-nav]').forEach(link => {
-            const conteudo = document.getElementById('conteudo')
+        <div class="box content" id="conteudo">
+            <h1> Mostrando o caminho ...</p>
+                <img class="image" src="/img/teacher.png" alt="" width="400px" height="300px"
+                    style="display: block; margin-left: auto; margin-right: auto;" ;>
+        </div>
+        <div class="box sidebar2">
+            <h2 style="text-align: center; margin-top: 0px;">Be a Profissional</h2>
+            <img class="image" src="/img/sidebar2.jpg" alt="" width="100px" height="500px"
+                style="display: block; margin-left: auto; margin-right: auto;" ;>
+        </div>
+        <div class="box footer">
+            <img class="image" src="/img/people-group.jpg" alt="" width="1250px" height="300px" style="display: block; margin-left: auto; margin-right: auto;">
+        </div>
 
-            link.onclick = function (e) {
-                e.preventDefault()
-                fetch(link.getAttribute('wm-nav'))
-                    .then(resp => resp.text())
-                    .then(html => conteudo.innerHTML = html)
-            }
-        })
-    </script>
+        <script>
+            document.querySelectorAll('[wm-nav]').forEach(link => {
+                const conteudo = document.getElementById('conteudo')
+
+                link.onclick = function (e) {
+                    e.preventDefault()
+                    fetch(link.getAttribute('wm-nav'))
+                        .then(resp => resp.text())
+                        .then(html => conteudo.innerHTML = html)
+                }
+            })
+        </script>
 </body>
 
 </html>
