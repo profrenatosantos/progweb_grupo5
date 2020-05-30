@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova 1º Bim | Guilherme Tinen Ortolani</title>
+    <link rel="stylesheet" href="css/prova.css">
+    <script src="https://kit.fontawesome.com/3b5310efad.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div class="row">
+
+        <div class="box a">
+            <img src="img/logo_fatec.jpg" alt="" srcset="">
+            Programação Web
+        </div>
+
+        <div class="box b">
+            Prova
+            <img src="img/logo_cps.jpg" alt="" srcset="">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="box c">
+            <nav class="menu">
+               <div class="part">
+                    <p class="title-part">Atividades Menu</p>
+                    <a href wm-nav="paginas/htmlintro.html">HTML Introduction<i class="fas fa-caret-right"></i></a>
+                    <a href wm-nav="paginas/htmlid.html">HTML Id<i class="fas fa-caret-right"></i></a>
+                    <a href wm-nav="paginas/htmlclasses.html">HTML Class<i class="fas fa-caret-right"></i></a>
+                    <a href wm-nav="paginas/htmlforms.html">HTML Forms<i class="fas fa-caret-right"></i></a>
+                    <a href wm-nav="paginas/cssintroduction.html">CSS Introduction<i class="fas fa-caret-right"></i></a>
+                    <a href wm-nav="paginas/cssborders.html">CSS Borders<i class="fas fa-caret-right"></i></a>
+                    <a href wm-nav="paginas/css margins.html">CSS Margins<i class="fas fa-caret-right"></i></a>
+                    <a href wm-nav="paginas/csspadding.html">CSS Padding<i class="fas fa-caret-right"></i></a>
+               </div>
+               <div class="part">
+                   <p class="title-part">Atividades Tabela</p>
+                   <a href wm-nav="paginas/Table.html">Lista de Empresas</a>
+               </div>
+            </nav>
+        </div>
+
+        <div class="box d">
+            Linguagens
+            <img src="img/div_conteudo.jpg" alt="">
+        </div>
+    </div>
+
+   <div class="row">
+        <div class="box e">
+            Fatec Taquaritinga
+            <p class="adress">
+                Av. Flávio Henrique Lemos, 585 Portal Itamaracá, Taquaritinga-SP CEP: 15906-522
+            </p>
+        </div>
+    </div>
+  
+  
+</body>
+</html>
+
+<script>
+    document.querySelectorAll('[wm-nav]').forEach(link => {
+        const conteudo = document.getElementsByClassName('d')[0];
+       
+
+        link.onclick = function (e) {
+            e.preventDefault()
+            fetch(link.getAttribute('wm-nav'))
+                .then(resp => resp.text())
+                .then(html => conteudo.innerHTML = html)
+            setTimeout(()=>{AjustMenu()},10);
+        }
+    })
+
+    function AjustMenu(){
+        const conteudo = document.getElementsByClassName('d')[0];
+        let menu = document.getElementsByClassName("c")[0];
+        
+            menu.style.height=conteudo.offsetHeight+"px";
+       
+    }
+</script>
