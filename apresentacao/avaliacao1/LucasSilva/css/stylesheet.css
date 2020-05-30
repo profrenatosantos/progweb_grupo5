@@ -1,0 +1,72 @@
+body {
+    margin: 1%;
+  }
+  
+  .wrapper {
+          display: grid;
+      grid-gap: 5px;
+          grid-template-columns: [col] 24.5% [col]  24.5% [col]  24.5% [col]  24.5%  ;
+          grid-template-rows: [row] auto [row] auto [row] ;
+          background-color: #fff;
+          color: #444;
+      }
+  
+      .box {
+          background-color: #444;
+          color: #fff;
+          border-radius: 5px;
+          padding: 20px;
+          font-size: 150%;
+  
+      }
+  
+      .a {
+          display: flex;
+          justify-content: space-between;
+          grid-column: col / span 2;
+          grid-row: row ;
+      }
+      .b {
+          display: flex;
+          justify-content: space-between;
+          grid-column: col 3 / span 2 ;
+          grid-row: row ;
+      }
+      .c {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          grid-column: col ;
+          grid-row: row 2 ;
+          width: auto;
+          height: 400px;
+      }
+      .links {
+        display: flex;
+        flex-direction: column;
+    }
+      .d {
+          color: black;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          grid-column: col 2 / span 3 ;
+          grid-row: row 2 ;
+          background-color: #fff;
+      }
+
+      .d img{
+          height: 50%;
+          width: 50%;
+      }
+  
+      .e {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          grid-column: col / span 4;
+          grid-row: row 3;
+      }
+
