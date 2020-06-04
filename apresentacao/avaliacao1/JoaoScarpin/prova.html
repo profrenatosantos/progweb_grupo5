@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <title>Avaliação de Joao Vitor Mialich Scapin</title>
+</head>
+<body>
+<div class="container">
+  
+  <div class="box a">
+    <img src="img/logo_fatec.jpg" alt="">
+
+    <h2>Programação Web</h2>
+  </div>
+  <div class="box b">
+    <h2>Prova</h2>
+    <img src="img/logo_cps.jpg" alt="">
+  </div>
+  <div class="menu">
+    <h3>Atividades Menu</h3>
+
+    <nav>
+      <h1>Curso Web Frontend</h1>
+      <a href wm-nav="paginas/htmlintro.html">HTML Introduction</a> <br>     
+      <a href wm-nav="paginas/htmlid.html">HTML Id</a> <br>
+      <a href wm-nav="paginas/htmlclasses.html">HTML class</a> <br>
+      <a href wm-nav="paginas/htmlforms.html">HTML Forms</a> <br>
+      <a href wm-nav="paginas/cssintroduction.html">CSS Introduction</a> <br>
+      <a href wm-nav="paginas/cssborders.html">CSS Borders</a> <br>
+      <a href wm-nav="paginas/css margins.html">CSS Margins</a> <br>
+      <a href wm-nav="paginas/csspadding.html">CSS Padding</a> <br>
+      
+  </nav>
+
+    <h1>Atividades Tabela</h1>
+    <ul>
+      <a href wm-nav="paginas/Table.html">LIsta de Produtos</a> <br>
+    </ul>
+  </div>
+  <div class="box c">
+    <div class="active" id="">
+      <h3>Linguagens</h3>
+      <img src="img/div_conteudo.jpg" alt="">
+    </div>
+    
+  </div>
+  <div class="footer">
+    <p>Fatec Taquaritinga</p>
+    <p>Av. Dr. Flávio Henrique Lemos, 585-Portal Itamaracá, SP</p>
+  </div>
+</div>
+
+
+   <script>
+            document.querySelectorAll('[wm-nav]').forEach(link => {
+                const conteudo = document.getElementsByClassName('active')[0];
+
+                link.onclick = function (e) {
+                    e.preventDefault()
+                    fetch(link.getAttribute('wm-nav'))
+                        .then(resp => resp.text())
+                        .then(html => conteudo.innerHTML = html)
+                }
+            })
+        </script>
+
+</body>
+</html>
