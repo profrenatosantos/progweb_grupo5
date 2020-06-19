@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <title>Avaliação - 1º Bimestre</title>
+</head>
+<body>
+
+    <div class="wrapper">
+        
+        <div class="box a">
+            <img src="img/logo_fatec.jpg" id="fatec" alt="">
+            <h2>Programação Web</h2>
+        </div>
+        
+        <div class="box b">
+            <img src="img/logo_cps.jpg" id="cps" alt="">
+            <h2>Prova</h2>
+        </div>
+        
+        <div class="box c">
+            <h4>Atividades Menu</h4>
+            <a href wm-nav="paginas/htmlintro.html">Html Introduction</a> <br>
+            <a href wm-nav="paginas/htmlid.html">Html Id</a> <br>
+            <a href wm-nav="paginas/htmlforms.html">Html Forms</a> <br>
+            <a href wm-nav="paginas/htmlclass.html">Html Class</a> <br>
+            <a href wm-nav="paginas/cssintro.html">CSS Introduction</a> <br>
+            <a href wm-nav="paginas/cssmargins.html">CSS Margins</a> <br>
+            <a href wm-nav="paginas/csspadding.html">CSS Padding</a> <br>
+            <a href wm-nav="paginas/cssborders.html">CSS Borders</a> <br>
+            <h4>Atividades Tabela</h4>
+            <a href wm-nav="paginas/tabela.html">Lista de Produtos</a> <br>
+        </div>
+        
+        <div class="box d" id="conteudo">
+            <h3>Linguagens</h3>
+            <img src="img/div_conteudo.jpg" id="linguagens" alt="">
+        </div>
+        
+        <div class="box e">
+            <p>Fatec Taquaritinga</p>
+            <p>Av. Dr. Flávio Henrique Lemos, 585 Portal Itamaracá, Taquaritinga - SP CEP: 15906-522</p>
+        </div>
+
+      </div>        
+
+      <script>
+        document.querySelectorAll('[wm-nav]').forEach(link => {
+            const conteudo = document.getElementById('conteudo')
+
+            link.onclick = function (e) {
+                e.preventDefault()
+                fetch(link.getAttribute('wm-nav'))
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+            }
+        })
+    </script>
+
+</body>
+</html>
