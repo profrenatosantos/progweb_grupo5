@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <title>Avaliação</title>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <img class="logo" src="img/fatec.png" alt="">
+  </div>
+  <div class="box left">
+    <img src="img/logo_fatec.jpg" alt="">
+
+    <h2>Programação Web</h2>
+  </div>
+  <div class="box right">
+    <h2>Prova</h2>
+
+    <img src="img/logo_cps.jpg" alt="">
+  </div>
+  <div class="menu">
+    <h3>Atividades Menu</h3>
+
+    <ul>
+      <li><a  class="tablinks" onclick="openCity(event, 'htmlintroduction')" href="#htmlintroduction">HTML Introduction</a></li>
+      <li><a  class="tablinks" onclick="openCity(event, 'id')" href="#id">HTML id</a></li>
+      <li><a  class="tablinks" onclick="openCity(event, 'class')" href="#class">HTML class</a></li>
+      <li><a  class="tablinks" onclick="openCity(event, 'forms')" href="#forms">HTML Forms</a></li>
+      <li><a  class="tablinks" onclick="openCity(event, 'cssintroduction')" href="#cssintroduction">CSS Introduction</a></li>
+      <li><a  class="tablinks" onclick="openCity(event, 'borders')" href="#borders">CSS Borders</a></li>
+      <li><a  class="tablinks" onclick="openCity(event, 'margin')" href="#margin">CSS Margin</a></li>
+      <li><a  class="tablinks" onclick="openCity(event, 'padding')" href="#padding">CSS Padding</a></li>
+    </ul>
+
+    <p>Atividades Tabela</p>
+    <ul>
+      <li><a class="tablinks" onclick="openCity(event, 'tabela')" href="#tabela">Lista de Produtos</a></li>
+    </ul>
+  </div>
+  <div class="box content">
+    <div class="active" id="defaultOpen">
+      <h3>Linguagens</h3>
+      <img src="img/div_conteudo.jpg" alt="">
+    </div>
+    
+    <div id="htmlintroduction" class="tabcontent">
+      <h3>What is HTML?</h3>
+
+      <ul class="list">
+        <li>HTML stands for Hyper Text Markup Language</li>
+        <li>HTML describes the structure of a Web page</li>
+        <li>HTML consists of a series of elements</li>
+        <li>HTML elements tell the browser how to display the content</li>
+        <li>HTML elements are represented by tags</li>
+        <li>HTML tags label pieces of content such as "heading", "paragraph", "table", and so on</li>
+        <li>Browsers do not display the HTML tags, but use them to render the content of the page</li>
+      </ul>
+    </div>
+
+    <div id="id" class="tabcontent">
+      <h3>HTML The id Attribute</h3>
+      <p>The HTML id attribute is used to specify a unique id for an HTML element (the value must be unique within the HTML document).</p>
+    </div>
+
+    <div id="class" class="tabcontent">
+      <h3>HTML The class Attribute</h3>
+      <p>The HTML class attribute is used to define equal styles for elements with the same class name.</p>
+    </div>
+
+    <div id="forms" class="tabcontent">
+      <h3>HTML Forms</h3>
+      <p>An HTML form is used to collect user input. The user input can then be sent to a server for processing. </p>
+    </div>
+
+    <div id="cssintroduction" class="tabcontent">
+      <h3>What is CSS?</h3>
+      <ul class="list">
+        <li>CSS stands for Cascading Style Sheets</li>
+        <li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li>
+        <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
+        <li>External stylesheets are stored in CSS files</li>
+      </ul>
+    </div>
+
+    <div id="borders" class="tabcontent">
+      <h3>CSS Border Properties</h3>
+      <p>The CSS border properties allow you to specify the style, width, and color of an element's border.</p>
+    </div>
+
+    <div id="margin" class="tabcontent">
+      <h3>CSS Margins</h3>
+      <p>The CSS margin properties are used to create space around elements, outside of any defined borders.</p>
+      <p>With CSS, you have full control over the margins. There are properties for setting the margin for each side of an element (top, right, bottom, and left).</p>
+    </div>
+
+    <div id="padding" class="tabcontent">
+      <h3>CSS Padding</h3>
+      <p>The CSS padding properties are used to generate space around an element's content, inside of any defined borders.</p>
+      <p>With CSS, you have full control over the padding. There are properties for setting the padding for each side of an element (top, right, bottom, and left).</p>
+    </div>
+
+    <div id="tabela" class="tabcontent table">
+      <h2>HTML Table</h2>
+      <table>
+        <tr>
+          <th>Produto</th>
+          <th>Quantidade</th>
+          <th>Valor</th>
+        </tr>
+        <tr>
+          <td>Arroz</td>
+          <td>5kg</td>
+          <td>R$ 50</td>
+        </tr>
+        <tr>
+          <td>Feijão</td>
+          <td>2kg</td>
+          <td>R$ 30</td>
+        </tr>
+        <tr>
+          <td>Carne</td>
+          <td>2kg</td>
+          <td>R$ 50</td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+  <div class="footer">
+    <p>Fatec Taquaritinga</p>
+    <p>Av. Dr. Flávio Henrique Lemos, 585-Portal Itamaracá, SP</p>
+  </div>
+</div>
+
+<script src="js/index.js"></script>
+</body>
+</html>
